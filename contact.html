@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>聯絡我們｜我的網站</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">我的網站</a>
+    <nav>
+      <a href="index.html">首頁</a>
+      <a href="about.html">公司介紹</a>
+      <a class="active" href="contact.html">聯絡我們</a>
+    </nav>
+  </header>
+
+  <main class="page contact-page">
+    <p class="eyebrow">CONTACT</p>
+    <h1>聯絡我們</h1>
+    <p class="lead">請填寫以下資料，送出後我們會收到你的訊息。</p>
+
+    <form id="contact-form" class="contact-form">
+      <label for="from_name">姓名 <span>*</span></label>
+      <input id="from_name" name="from_name" type="text" autocomplete="name" required placeholder="請輸入姓名">
+
+      <label for="phone">電話 <span>*</span></label>
+      <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="請輸入聯絡電話">
+
+      <label for="reply_to">Email <span>*</span></label>
+      <input id="reply_to" name="reply_to" type="email" autocomplete="email" required placeholder="name@example.com">
+
+      <label for="message">聯絡內容 <span>*</span></label>
+      <textarea id="message" name="message" rows="6" required placeholder="請輸入你想詢問的內容"></textarea>
+
+      <button id="submit-button" class="button" type="submit">送出表單</button>
+      <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+      <p class="form-note">表單資料只會在你按下送出後提交。請勿填寫密碼或其他敏感資訊。</p>
+    </form>
+  </main>
+
+  <footer>© 2026 我的網站｜All rights reserved.</footer>
+
+  <!-- EmailJS browser SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
